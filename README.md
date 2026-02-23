@@ -1,2 +1,2 @@
-# dsi-paula-pires
+# Desenvolviento de Software I
 Aulas de Desenvolvimento de Software | com o professor João Siles
