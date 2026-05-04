@@ -9,28 +9,39 @@ public class Licao {
         // Utilizando os operadores:
 
         int a = 10;
+        
         a = 9;
-        System.out.println(a);
+        System.out.println("= : " + a);
+
         a += 1;
-        System.out.println(a);
+        System.out.println("+= : " + a);
+
         a -= 2;
-        System.out.println(a);
+        System.out.println("-= : " + a);
+
         a *= 2;
-        System.out.println(a);
+        System.out.println("*= : " + a);
+
         a /= 2;
-        System.out.println(a);
+        System.out.println("/= : " + a);
+
         a %= 2;
-        System.out.println(a);
+        System.out.println("%= : " + a);
+
         a &= 3;
-        System.out.println(a);
+        System.out.println("&= :" + a);
+
         a |= 3;
-        System.out.println(a);
+        System.out.println("|= : " + a);
+
         a ^= 2;
-        System.out.println(a);
+        System.out.println("^= : " + a);
+
         a >>= 4;
-        System.out.println(a);
+        System.out.println(">>= : " + a);
+
         a <<= 10;
-        System.out.println(a);
+        System.out.println("<<= : " + a);
 
 
     }
