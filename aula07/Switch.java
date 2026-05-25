@@ -14,5 +14,5 @@ public class Switch {
         default:
             System.out.println("Não tem comooooooo :(");
         }
-
+    }
 }

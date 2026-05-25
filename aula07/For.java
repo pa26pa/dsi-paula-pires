@@ -4,12 +4,13 @@ public class For {
         int a, b, c;
         a = 0;
         b = 0;
+        c = 0;
         for(int i = 0; i < 5; i++) {
             System.out.println("- " +  i);
             a += 1;
             c = i;
         }
-        b = c - a;
+        b = c - a +1;
 
         System.out.println("O número original era: " + b);
         
