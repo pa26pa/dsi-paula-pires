@@ -15,7 +15,7 @@ public class Exercicio02 {
         int tempo = input.nextInt();
 
         System.out.println("Salario: ");
-        int salario = input.nextInt();
+        double salario = input.nextDouble();
 
         double adicional;
         adicional = 100;
@@ -32,5 +32,6 @@ public class Exercicio02 {
         System.out.println("Bonus: " + adicional);
         System.out.println("-------------------------");
 
+        input.close();
     }
 }

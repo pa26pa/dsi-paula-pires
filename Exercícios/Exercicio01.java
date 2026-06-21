@@ -11,13 +11,13 @@ public class Exercicio01 {
         Scanner input = new Scanner(System.in); 
 
         System.out.println("Nome: ");
-        String nome = input.nextLine();  // Read user input
+        String nome = input.nextLine(); 
         
         System.out.println("Horas Trabalhadas: ");
         int horas_trabalhadas = input.nextInt();
         
         System.out.println("Salario por hora: ");
-        int salario_hora = input.nextInt();
+        double salario_hora = input.nextDouble();
         
         System.out.println("Filhos < 14 anos: ");
         int filhos_14 = input.nextInt();
@@ -26,42 +26,45 @@ public class Exercicio01 {
         int idade = input.nextInt();
         
         System.out.println("Tempo de Serviço: ");
-        int tempos_serviso = input.nextInt();
+        int tempo_serviço = input.nextInt();
         
         System.out.println("Salario Familiar: ");
-        int salario_familiar = input.nextInt();
+        double salario_familiar = input.nextDouble();
         
 
-        int salario_bruto =  horas_trabalhadas * salario_hora;
+        double salario_bruto =  horas_trabalhadas * salario_hora;
 
         double desconto = 0.085 * salario_bruto;
 
         double bruto = salario_bruto - desconto;
 
         double familia = salario_familiar * filhos_14;
-
-
+        
+        
+        ir = 0;
         if (bruto > 1500) {
             ir = bruto * 0.15;
-        } else if (bruto >= 500 & bruto <= 1500) {
+        }
+        if (bruto >= 500 & bruto <= 1500) {
             ir = bruto * 0.08;
-        } else {
-            ir = 0;
         }
 
         if (idade > 40) {
             adicional_idade = bruto * 0.02;
         }
 
-        if (tempos_serviso > 15) {
+        if (tempo_serviço > 15) {
             adicional_tempo = bruto * 0.035;
-        } else if (tempos_serviso < 15 & tempos_serviso > 5 & idade > 30) {
+        } 
+        
+        if (tempo_serviço < 15 & tempo_serviço > 5 & idade > 30) {
             adicional_tempo = bruto * 0.015;
         }
 
         double total_descontos = desconto + ir;
+        double total_adicionais = bruto + familia + adicional_idade + adicional_tempo;
 
-        double salario_liquido = bruto + familia + adicional_idade + adicional_tempo - total_descontos;
+        double salario_liquido = total_adicionais - total_descontos;
 
         System.out.println("--------------------------------------");
         System.out.println("Nome: " + nome);
@@ -78,6 +81,7 @@ public class Exercicio01 {
         System.out.println("--------------------------------------");
         System.out.println("Salario Liquido: "+ salario_liquido);
         System.out.println("--------------------------------------");
-
+        
+        input.close();
     }
 }
