@@ -66,9 +66,9 @@ public class CarroDAO {
             ps.setString(3, carro.getPlaca());
 
             if (ps.executeUpdate() > 0) {
-                return "Carro alterado com sucesso!";
+                return "Carro alterado :) :) :)!";
             } else {
-                return "Nenhum carro encontrado com essa placa.";
+                return "Nenhum carro encontrado :( :( :(";
             }
 
         } catch (SQLException e) {
@@ -124,7 +124,7 @@ public class CarroDAO {
             return listaCarro;
 
         } catch (SQLException e) {
-            System.out.println("Erro ao listar carros: "
+            System.out.println("Errooooooo ao listar carros: "
                                + e.getMessage());
 
             return null;
